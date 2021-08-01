@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // gibing the tableView the same size as the view
+        // giving the tableView the same size as the view
         tableView.frame = view.bounds
     }
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     // what to put into each row?
-    // you need to register the cell identifier with tableView.register in viewDidLoad()
+    // you need to register the cell identifier with tableView.register within viewDidLoad()
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.textLabel?.text = "Phrase number \(indexPath.row): \(phrases[indexPath.row])"
